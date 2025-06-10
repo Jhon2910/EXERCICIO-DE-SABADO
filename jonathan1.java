@@ -1,14 +1,13 @@
 import java.util.Scanner;
 
-public class Main {
+public class jonathan1 {
     public static void main(String[] args) {
         Scanner sc = new Scanner(System.in);
 
-        String usuario = sc.nextLine();
-        int senha = sc.nextInt();
-
         System.out.print("Digite o nome do usuário: ");
-        System.out.print("Digite a senha:");
+        String usuario = sc.nextLine();
+        System.out.print("Digite a senha: ");
+        int senha = sc.nextInt();
 
         if (sc.hasNextInt()){
             System.out.print("Digite apenas números inteiros!");
@@ -17,6 +16,7 @@ public class Main {
             System.out.print("Digite apenas Letras");
         }
         else {
+            senha = sc.nextInt();
             if (usuario.equals("admin")) {//validação apenas para String
                 if (senha == 12345) {
                     System.out.print("Acesso concedido.Bem-vindo,admin!");
@@ -27,5 +27,6 @@ public class Main {
                 System.out.print("Usuário não encontrado");
             }
         }
+        sc.close();
     }
 }
