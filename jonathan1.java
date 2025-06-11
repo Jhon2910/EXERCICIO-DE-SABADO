@@ -10,9 +10,11 @@ public class jonathan1 {
         int senha = sc.nextInt();
 
         if (sc.hasNextInt()){
+            senha = sc.hasNextInt();
             System.out.print("Digite apenas números inteiros!");
         }
         else if(sc.hasNextLine()){
+            usuario = sc.hasNextLine();
             System.out.print("Digite apenas Letras");
         }
         else {
