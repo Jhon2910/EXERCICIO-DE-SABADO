@@ -1,34 +1,31 @@
 import java.util.Scanner;
 
-public class jonathan1 {
+public class jonathan {
     public static void main(String[] args) {
         Scanner sc = new Scanner(System.in);
 
         System.out.print("Digite o nome do usuário: ");
         String usuario = sc.nextLine();
-        System.out.print("Digite a senha: ");
-        int senha = sc.nextInt();
 
-        if (sc.hasNextInt()){
-            senha = sc.hasNextInt();
-            System.out.print("Digite apenas números inteiros!");
-        }
-        else if(sc.hasNextLine()){
-            usuario = sc.hasNextLine();
-            System.out.print("Digite apenas Letras");
-        }
-        else {
-            senha = sc.nextInt();
-            if (usuario.equals("admin")) {//validação apenas para String
+        System.out.print("Digite a senha(Apenas numeros inteiros!): ");
+
+        if (sc.hasNextInt()) {
+            int senha = sc.nextInt();
+
+            if (usuario.equals("admin")) {
                 if (senha == 12345) {
-                    System.out.print("Acesso concedido.Bem-vindo,admin!");
+                    System.out.println("Acesso concedido. Bem-vindo,admin!");
                 } else {
-                    System.out.print("Senha incorreta!");
+                    System.out.println("Senha incorreta!");
                 }
             } else {
-                System.out.print("Usuário não encontrado");
+                System.out.println("Usuário não encontrado");
             }
         }
-        sc.close();
+            else {
+                System.out.println("Digite apenas numeros!");
+            }
+            sc.close();
     }
+
 }
